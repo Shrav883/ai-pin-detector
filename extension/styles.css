@@ -1,0 +1,30 @@
+/* Applied to pins flagged as AI-generated */
+.ai-pin-blurred {
+  filter: blur(6px);
+  transition: filter 0.3s ease;
+}
+
+.ai-pin-blurred:hover {
+  filter: blur(0px);
+}
+
+/* Label badge shown on flagged pins */
+.ai-pin-label {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background: rgba(6, 127, 8, 0.521);
+  color: rgba(255, 255, 255, 0.93);
+  font-size: 11px;
+  font-weight: bold;
+  padding: 3px 7px;
+  border-radius: 4px;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+/* Make sure the pin container can hold the absolute label */
+.ai-pin-wrapper {
+  position: relative;
+  display: inline-block;
+}

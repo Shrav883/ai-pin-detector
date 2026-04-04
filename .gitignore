@@ -1,0 +1,14 @@
+# Never upload the API key
+backend/.env
+
+# Never upload the virtual environment (too large, not needed)
+backend/venv/
+
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+
+# Windows junk
+Thumbs.db
+desktop.ini

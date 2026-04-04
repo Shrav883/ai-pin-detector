@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "AI Pin Detector",
+  "version": "1.0",
+  "description": "Detects likely AI-generated Pins on Pinterest",
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://*.pinterest.com/*",
+    "http://localhost:5000/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://*.pinterest.com/*"],
+      "js": ["content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "AI Pin Detector"
+  }
+}
