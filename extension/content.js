@@ -1,7 +1,7 @@
 // content.js
 // Runs on Pinterest pages. Finds Pin cards, extracts text,
 // sends to backend, and applies blur/label/hide based on result.
-console.log("AI Pin Detector: content script loaded");
+// console.log("AI Pin Detector: content script loaded");
 
 const classifiedPins = new Set(); // track pins we've already processed
 
