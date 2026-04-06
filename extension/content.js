@@ -31,7 +31,7 @@ function extractPinText(pin) {
   // Check for Pinterest's own AI label in aria-labels
   pin.querySelectorAll("[aria-label]").forEach(el => {
     const label = el.getAttribute("aria-label")?.toLowerCase() || "";
-    if (label.includes("ai") || label.includes("generated") || label.includes("created with")) {
+    if (label.includes("ai") || label.includes("generated") || label.includes("created with") || label.includes("AI Modified") ) {
       texts.push(el.getAttribute("aria-label"));
     }
   });
